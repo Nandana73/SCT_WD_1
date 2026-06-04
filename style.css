@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    transition:0.4s;
+    z-index:1000;
+}
+
+nav.scrolled{
+    background:#111;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+}
+
+.logo{
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00ffd5;
+    transform:scale(1.1);
+}
+
+.active{
+    color:#00ffd5;
+    border-bottom:2px solid #00ffd5;
+}
+
+section{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.content{
+    max-width:700px;
+}
+
+.content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.content p{
+    font-size:22px;
+    margin-bottom:30px;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:30px;
+    background:white;
+    color:black;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+#home{
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+#about{
+    background:linear-gradient(135deg,#56ab2f,#a8e063);
+}
+
+#services{
+    background:linear-gradient(135deg,#ff7e5f,#feb47b);
+}
+
+#contact{
+    background:linear-gradient(135deg,#654ea3,#eaafc8);
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        padding:15px;
+    }
+
+    nav ul{
+        margin-top:10px;
+    }
+
+    nav ul li{
+        margin:0 10px;
+    }
+
+    .content h1{
+        font-size:38px;
+    }
+
+    .content p{
+        font-size:18px;
+    }
+
+    .btn{
+        padding:12px 24px;
+    }
+}
